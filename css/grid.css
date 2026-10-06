@@ -1,0 +1,241 @@
+/* ==========================================================================
+   Structural grid — one continuous coordinate system behind the whole site.
+   Axes are measured from the content box (--gut to 100% - --gut) and follow
+   the 38.2 / 61.8 splits the layouts already use.
+
+     m  margin utility guide   (dashed, ≥1280)
+     l  left content edge      (solid)
+     b  38.2%  labels | text   (solid)
+     c  61.8%  image | info    (dashed)
+     r  right content edge     (solid)
+   ========================================================================== */
+
+@property --gb { syntax: "<color>"; inherits: false; initial-value: transparent }
+@property --gc { syntax: "<color>"; inherits: false; initial-value: transparent }
+
+:root {
+    --bg: #F5F5F3;
+
+    --gs: rgba(21, 21, 21, .085);   /* solid guide */
+    --gd: rgba(21, 21, 21, .15);    /* dashed guide */
+    --gm: rgba(21, 21, 21, .26);    /* intersection marks */
+    --gh: rgba(21, 21, 21, .22);    /* hovered guide */
+
+    --cw: calc(100% - var(--gut) * 2);
+    --x-m: calc(var(--gut) * .5);
+    --x-l: var(--gut);
+    --x-b: calc(var(--gut) + var(--cw) * .382);
+    --x-c: calc(var(--gut) + var(--cw) * .618);
+    --x-r: calc(100% - var(--gut));
+    --x-k: var(--x-r);              /* second mark position; moves to --x-b on wider screens */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --gs: rgba(239, 238, 234, .075);
+        --gd: rgba(239, 238, 234, .15);
+        --gm: rgba(239, 238, 234, .28);
+        --gh: rgba(239, 238, 234, .24);
+    }
+}
+
+:root[data-theme="dark"] {
+    --gs: rgba(239, 238, 234, .075);
+    --gd: rgba(239, 238, 234, .15);
+    --gm: rgba(239, 238, 234, .28);
+    --gh: rgba(239, 238, 234, .24);
+}
+
+body {
+    position: relative
+}
+
+/* ---- vertical guides: solid (body::before), dashed (body::after) -------- */
+
+body::before,
+body::after,
+.nav::before,
+.nav::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none
+}
+
+body::before,
+.nav::before {
+    --gb: var(--gs);
+    background:
+        linear-gradient(var(--gs), var(--gs)) var(--x-l) 0 / 1px 100% no-repeat,
+        linear-gradient(var(--gb), var(--gb)) var(--x-b) 0 / 1px 100% no-repeat,
+        linear-gradient(var(--gs), var(--gs)) var(--x-r) 0 / 1px 100% no-repeat;
+    transition: --gb .6s cubic-bezier(.2, .7, .2, 1)
+}
+
+body::after {
+    --gc: var(--gd);
+    background:
+        repeating-linear-gradient(to bottom, var(--gd) 0 5px, transparent 5px 14px) var(--x-m) 0 / 1px 100% no-repeat,
+        repeating-linear-gradient(to bottom, var(--gc) 0 5px, transparent 5px 14px) var(--x-c) 0 / 1px 100% no-repeat;
+    transition: --gc .6s cubic-bezier(.2, .7, .2, 1)
+}
+
+/* the margin guide only exists on wide screens */
+@media (max-width: 1279px) {
+    body::after {
+        background:
+            repeating-linear-gradient(to bottom, var(--gc) 0 5px, transparent 5px 14px) var(--x-c) 0 / 1px 100% no-repeat
+    }
+}
+
+/* opening the menu reveals two extra axes (14.6% and 76.4%) */
+.nav::after {
+    background:
+        repeating-linear-gradient(to bottom, var(--gd) 0 5px, transparent 5px 14px) var(--x-m) 0 / 1px 100% no-repeat,
+        repeating-linear-gradient(to bottom, var(--gd) 0 5px, transparent 5px 14px) calc(var(--gut) + var(--cw) * .146) 0 / 1px 100% no-repeat,
+        repeating-linear-gradient(to bottom, var(--gd) 0 5px, transparent 5px 14px) var(--x-c) 0 / 1px 100% no-repeat,
+        repeating-linear-gradient(to bottom, var(--gd) 0 5px, transparent 5px 14px) calc(var(--gut) + var(--cw) * .764) 0 / 1px 100% no-repeat;
+    opacity: 0;
+    transition: opacity .6s cubic-bezier(.2, .7, .2, 1) .15s
+}
+
+.nav.open::after {
+    opacity: 1
+}
+
+/* ---- horizontal guides: only at structural moments ---------------------- */
+/* top of Academic Projects, About, Contact; first section and first "next"
+   block on project pages; the closing statement of Visual Design.            */
+
+#work,
+#about,
+#contact,
+.vd-close,
+.cs .sec:first-of-type {
+    position: relative
+}
+
+#work::before,
+#about::before,
+#contact::before,
+.vd-close::before,
+.cs .sec:first-of-type::before,
+.cs + .pnav::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 9px;
+    pointer-events: none;
+    background:
+        linear-gradient(var(--gs), var(--gs)) 0 50% / 100% 1px no-repeat,
+        linear-gradient(var(--gm), var(--gm)) calc(var(--x-l) - 2px) 50% / 5px 5px no-repeat,
+        linear-gradient(var(--gm), var(--gm)) calc(var(--x-k) - 2px) 50% / 5px 5px no-repeat,
+        linear-gradient(var(--gm), var(--gm)) var(--x-c) 50% / 1px 9px no-repeat
+}
+
+/* project pages sit inside .cs padding, so the line bleeds back out to the edges */
+.cs .sec:first-of-type::before {
+    left: calc(var(--gut) * -1);
+    right: calc(var(--gut) * -1)
+}
+
+/* closing statement: line runs from the 38.2% axis to the right edge only */
+.vd-close::before {
+    left: var(--x-b);
+    background:
+        linear-gradient(var(--gs), var(--gs)) 0 50% / 100% 1px no-repeat,
+        linear-gradient(var(--gm), var(--gm)) -2px 50% / 5px 5px no-repeat
+}
+
+.cs + .pnav {
+    position: relative
+}
+
+/* ---- hover: the guide next to the project brightens ---------------------- */
+/* .proj.a puts its image left of the 61.8% axis, .proj.b right of 38.2%      */
+
+body:has(.proj.a:hover)::after {
+    --gc: var(--gh)
+}
+
+body:has(.proj.b:hover)::before {
+    --gb: var(--gh)
+}
+
+/* ---- tablet: keep only the main axes (b, c, l, r) ------------------------ */
+
+@media (min-width: 768px) {
+    :root {
+        --x-k: var(--x-b)
+    }
+}
+
+/* ---- mobile: three guides, dashed one appears only in short stretches ---- */
+
+@media (max-width: 767px) {
+    body::before {
+        background:
+            linear-gradient(var(--gs), var(--gs)) var(--x-l) 0 / 1px 100% no-repeat,
+            linear-gradient(var(--gs), var(--gs)) var(--x-r) 0 / 1px 100% no-repeat
+    }
+
+    body::after {
+        background:
+            repeating-linear-gradient(to bottom, var(--gd) 0 5px, transparent 5px 14px) var(--x-b) 0 / 1px 100% no-repeat;
+        -webkit-mask-image: repeating-linear-gradient(to bottom, #000 0 360px, transparent 360px 1400px);
+        mask-image: repeating-linear-gradient(to bottom, #000 0 360px, transparent 360px 1400px)
+    }
+
+    .nav::before {
+        background:
+            linear-gradient(var(--gs), var(--gs)) var(--x-l) 0 / 1px 100% no-repeat,
+            linear-gradient(var(--gs), var(--gs)) var(--x-r) 0 / 1px 100% no-repeat
+    }
+
+    .nav::after {
+        background:
+            repeating-linear-gradient(to bottom, var(--gd) 0 5px, transparent 5px 14px) var(--x-b) 0 / 1px 100% no-repeat
+    }
+
+    /* the 61.8% tick has no guide to sit on here */
+    #work::before,
+    #about::before,
+    #contact::before,
+    .cs .sec:first-of-type::before,
+    .cs + .pnav::before {
+        background:
+            linear-gradient(var(--gs), var(--gs)) 0 50% / 100% 1px no-repeat,
+            linear-gradient(var(--gm), var(--gm)) calc(var(--x-l) - 2px) 50% / 5px 5px no-repeat,
+            linear-gradient(var(--gm), var(--gm)) calc(var(--x-r) - 2px) 50% / 5px 5px no-repeat
+    }
+
+    .vd-close::before {
+        left: var(--x-l)
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body::before,
+    body::after,
+    .nav::after {
+        transition: none
+    }
+}
+
+/* ---- grid toggle (nav) ---------------------------------------------------- */
+
+html.no-grid body::before,
+html.no-grid body::after,
+html.no-grid .nav::before,
+html.no-grid .nav::after,
+html.no-grid #work::before,
+html.no-grid #about::before,
+html.no-grid #contact::before,
+html.no-grid .vd-close::before,
+html.no-grid .cs .sec:first-of-type::before,
+html.no-grid .cs + .pnav::before {
+    display: none
+}

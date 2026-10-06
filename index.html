@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Chaitanya Handa — UI/UX Designer &amp; Researcher</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap">
+    <link rel="stylesheet" href="css/main.css">
+    <script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); if (localStorage.getItem("grid") === "off") document.documentElement.classList.add("no-grid") } catch (e) { }</script>
+    <link rel="stylesheet" href="css/visual-design.css">
+    <link rel="stylesheet" href="css/grid.css">
+</head>
+
+<body>
+    <div class="bar"><button id="openNav" aria-expanded="false" aria-controls="nav"><span class="burger"
+                aria-hidden="true">☰</span><span>CH</span><span class="sr">Open menu</span></button><div class="ctl"><button id="themeToggle" type="button"></button><button id="gridToggle" type="button" role="switch" aria-checked="true" aria-label="Toggle grid"><span class="micro">Grid</span><span class="sw" aria-hidden="true"></span></button></div></div>
+    <nav class="nav" id="nav" aria-label="Main" aria-hidden="true">
+        <div class="top"><span class="micro">CH</span><button id="closeNav">Close ✕</button></div>
+        <ol>
+            <li><a href="#about"><small>01 —</small>About</a></li>
+            <li><a href="#work"><small>02 —</small>UI/UX</a></li>
+            <li><a href="#visual"><small>03 —</small>Visual Design</a></li>
+            <li><a href="#experience"><small>04 —</small>Experience</a></li>
+            <li><a href="#contact"><small>05 —</small>Contact</a></li>
+        </ol>
+    </nav>
+    <div id="home">
+        <header class="landing" id="top">
+            <div></div>
+            <div class="meta micro" style="color:var(--ink)">UI/UX Designer &amp; Researcher</div>
+            <div class="center" style="grid-row:2;grid-column:1" id="vwrap">
+                <span class="micro" style="display:block;margin-bottom:var(--s2)">A small formality.</span>
+                <button class="verify" id="verify" role="checkbox" aria-checked="false"><span class="box"
+                        aria-hidden="true"><svg viewBox="0 0 14 14">
+                            <path d="M2 7.5l3.5 3.5L12 3" />
+                        </svg></span><span id="vlab">Verify you're not an AI</span></button>
+                <div class="reveal" aria-live="polite">
+                    <p class="note">P.S. This portfolio was created by a human.</p>
+                </div>
+            </div>
+            <div class="bottom" style="grid-row:3"><span>Portfolio</span><span>Chaitanya Handa</span></div>
+        </header>
+        <main id="main">
+            <div class="gate" id="gate">
+                <section id="work" aria-labelledby="wt">
+                    <div class="work-head rv"><span class="micro">02 — Work</span>
+                        <h1 id="wt">Academic Projects</h1>
+                        <p class="sub">Two studies in attention, access, and the systems people move through.</p>
+                    </div>
+                    <div id="list"></div>
+                </section>
+                <section class="vd" id="visual" aria-labelledby="vt">
+                    <div class="work-head rv"><span class="micro">03 — Visual Design</span>
+                        <h1 id="vt">Visual Design Projects</h1>
+                        <p class="sub">Identity, visual systems and communication — explored through research, iteration and making.</p>
+                    </div>
+                    <ul class="vd-grid" id="vdlist"></ul>
+                    <div class="vd-more rv"><p>More work, over on Behance.</p><a href="https://www.behance.net/chaitanya_handa" target="_blank" rel="noopener noreferrer">View Behance →</a></div>
+                    <div class="vd-close rv"><h1>More than the final frame.</h1><p>Explore the thinking, experiments and decisions behind the work.</p></div>
+                </section>
+                <section class="about wrap" id="about" aria-labelledby="at">
+                    <div class="hd rv"><span class="micro">01 — About</span></div>
+                    <div class="main">
+                        <h1 class="stmt rv" id="at">Designing for the space between people and systems.</h1>
+                        <div class="txt rv">
+                            <p>I’m Chaitanya, a UI/UX designer and researcher interested in how people understand, adapt
+                                to, and sometimes resist the systems around them. My practice moves between observation,
+                                structure, interaction, and visual communication.</p>
+                        </div>
+                        <figure class="abimg rv">
+                            <div class="ph"><img src="assets/images/my-pic.png" alt="Chaitanya Handa" loading="lazy"></div>
+                        </figure>
+                        <p class="micro rv ps">P.S. Still figuring things out.<br>Deliberately.</p>
+                    </div>
+                    <div class="int rv"><span class="micro">Currently interested in</span>
+                        <ul>
+                            <li>Human behaviour and psychology</li>
+                            <li>Design systems</li>
+                            <li>UX writing</li>
+                            <li>Research</li>
+                            <li>Visual Communication</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="exp wrap" id="experience" aria-labelledby="et">
+                    <div class="rv"><span class="micro">04 — Experience</span>
+                        <h1 id="et" style="margin-top:16px">Experience</h1>
+                    </div>
+                    <div class="row rv"><span class="micro y">01 · May – Jul 2026</span>
+                        <div>
+                            <h1>UI/UX Intern</h1>
+                            <div class="co">Namekart</div>
+                            <p>Designed end-to-end experiences for <a class="lnk" href="https://name.ai" target="_blank" rel="noopener noreferrer">Name.ai</a>’s public-facing platform and internal dashboard, from user flows and wireframes to interaction patterns for domain marketplace processes. The whole design was done in Figma and Claude: I built and maintained a scalable design system in Figma, and used Figma Make and Claude to design data-intensive dashboards and high-fidelity interfaces.</p>
+                        </div>
+                    </div>
+                    <div class="row rv"><span class="micro y">02 · Mar – May 2026</span>
+                        <div>
+                            <h1>UI/UX Intern</h1>
+                            <div class="co">Veins Studio</div>
+                            <p>Balanced graphic and product design for multiple clients: brand identities, logos, typography, colour palettes, brand books and social assets, alongside user flows, wireframes and interface layouts focused on clarity and usability.</p>
+                        </div>
+                    </div>
+                    <div class="row rv"><span class="micro y">03 · Aug 2024 – May 2025</span>
+                        <div>
+                            <h1>Communication Designer</h1>
+                            <div class="co">Quaogni</div>
+                            <p>Led brand identity design, including logo, colour and typography. Designed onboarding and sign-up journeys with the product manager, shaped the trading app’s landing platform and interface around usability and hierarchy, and created pitch decks, ads and marketing assets.</p>
+                        </div>
+                    </div>
+                    <div class="row rv"><span class="micro y">04 · Sept 2023 – Mar 2024</span>
+                        <div>
+                            <h1>Graphic Designer</h1>
+                            <div class="co">Roadzen Inc.</div>
+                            <p>Defined visual identity and design systems for marketing, with a futuristic visual language across the platform. Iterated on colour, typography and illustration styles, and designed custom illustrations in Adobe Illustrator for the subsidiary brands.</p>
+                            <a class="lnk" href="https://www.behance.net/gallery/200289477/Social-media-Designs-for-Roadzen" target="_blank" rel="noopener noreferrer">View social media designs on Behance ↗</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="contact" id="contact" aria-labelledby="ct"><span class="micro rv">05 — Contact</span>
+                    <h1 id="ct" class="rv">Let's talk over a good cup of idea.</h1>
+                    <ul class="links rv">
+                        <li><a href="https://www.linkedin.com/in/chaitanya-handa4569" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a></li>
+                        <li><a href="https://www.behance.net/chaitanya_handa" target="_blank" rel="noopener">Behance <span aria-hidden="true">↗</span></a></li>
+                        <li><a href="mailto:chaitanyahanda4569@gmail.com">Email <span aria-hidden="true">↗</span></a></li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+        <footer class="micro"><span>© Chaitanya Handa</span><a href="Chaitanya%20Handa%20Resume.pdf" download="Chaitanya Handa Resume.pdf" style="text-decoration:underline;text-underline-offset:3px">Download CV</a><span>Made by a human.</span></footer>
+    </div>
+    <div id="page"></div>
+    <script>var IM = { "s224": "assets/images/saanjh-imagery/image%2038.png", "s000": "assets/images/saanjh-imagery/image%2038.png", "b006": "assets/images/saanjh-imagery/image%2038.png", "s048": "assets/images/saanjh-imagery/image%2038.png", "s108": "assets/images/saanjh-imagery/image%2038.png", "s258": "assets/images/saanjh-imagery/image%2038.png", "b012": "assets/images/saanjh-imagery/image%2038.png", "s014": "assets/images/saanjh-imagery/image%2038.png", "b238": "assets/images/saanjh-imagery/image%2038.png", "s042": "assets/images/saanjh-imagery/image%2038.png", "b246": "assets/images/saanjh-imagery/image%2038.png", "s134": "assets/images/saanjh-imagery/image%2038.png", "s144": "assets/images/saanjh-imagery/image%2038.png", "b254": "assets/images/saanjh-imagery/image%2038.png", "s140": "assets/images/saanjh-imagery/image%2038.png", "b242": "assets/images/saanjh-imagery/image%2038.png", "s004": "assets/images/saanjh-imagery/image%2038.png", "s040": "assets/images/saanjh-imagery/image%2038.png", "s024": "assets/images/saanjh-imagery/image%2038.png", "b152": "assets/images/saanjh-imagery/image%2038.png", "b184": "assets/images/saanjh-imagery/image%2038.png", "s110": "assets/images/saanjh-imagery/image%2038.png", "b148": "assets/images/saanjh-imagery/image%2038.png", "s198": "assets/images/saanjh-imagery/image%2038.png", "b268": "assets/images/saanjh-imagery/image%2038.png", "s204": "assets/images/saanjh-imagery/image%2038.png", "b000": "assets/images/saanjh-imagery/image%2038.png" };
+        var CS = {
+            saanjh: {
+                n: "01", t: "Saanjh", d: "A compassionate service that helps families navigate loss and last rites.", y: "2026", role: "UI/UX Designer & Researcher", disc: "Human Centred Design, Service Design, Culturally Intelligent AI, Family First Approach", cover: "assets/images/saanjh/saanjh cover.png", thumb: "assets/images/saanjh/saanjh cover1.png", tar: "824/653", url: "https://www.behance.net/gallery/249769229/Saanjh", tryUrl: "saanjh_cm_portal-3.html", ar: "16/9", sec: [
+                    ["Context", "Because no one should have to navigate loss alone.", ["In India, the loss of a loved one leads families into the necessary duties of arranging last rites, obtaining death certificates, filing insurance claims, settling hospital bills, and managing complex paperwork, all while honouring religious and cultural rituals.", "Instead of the quiet space they need to grieve, they often become consumed by these time-sensitive tasks and fragmented systems."], []],
+                    ["The question", "How can service design thoughtfully intervene?", ["This project explores how service design, through human-centred systems, accessible experiences, and compassionate design, can bridge the existing gaps so families can fulfil their responsibilities with greater ease and find the emotional space they need to mourn with dignity."], []],
+                    ["Research", "Understanding the post-loss ecosystem", ["The period right after a death is emotionally overwhelming and operationally complex. Families face time-sensitive decisions, administrative formalities, and cultural rituals within a very short window. In India this is amplified by diverse religious practices, fragmented service providers, and limited centralised support.", "I first mapped the steps families typically take:", ["Immediate medical confirmation", "Arranging transportation", "Obtaining the death certificate", "Settling immediate expenses", "Coordinating services and rituals", "Informing institutions", "Legal and administrative formalities", "Post-ritual and emotional aftermath"], "I then looked at what people share online. Many turn to the internet simply asking what to do next, and the experiences also show the added difficulty for NRIs and people managing everything from a distance.", "Primary research was conducted with people who had recently experienced loss, and with frontline workers who regularly interact with such families."], [["seq", ["assets/images/saanjh/research findings1.png", "assets/images/saanjh/research findings 2.png", "assets/images/saanjh/research findings3.png", "assets/images/saanjh/research findings4.png", "assets/images/saanjh/research findings5.png", "assets/images/saanjh/research findings6.png", "assets/images/saanjh/research findings7.png", "assets/images/saanjh/research finding8.png"], "What families were asking online"]]],
+                    ["What I found", "Responsibilities arrive before grief has room.", ["One persona, Gurpreet Singh, anchors the findings. When he lost his mother, there was no time to pause, only responsibilities to carry forward. Unclear processes and constant advice from relatives added to the confusion.", "His pain points:", ["No clear or centralised source of information", "Repetitive, time-consuming paperwork", "Financial and emotional strain caused by delays", "Lack of empathy and sensitivity in systems and processes"], "BQ:Losing a loved one is difficult - managing what follows makes it harder.", "Families are left dealing with multiple systems, unclear processes, and constant decisions. Grief is interrupted by responsibilities that demand clarity, time, and emotional strength."], [["s", ["assets/images/saanjh/saanjh user personna.png"], "Gurpreet Singh, persona"]]],
+                    ["Design direction", "One person, one point of contact.", ["Saanjh combines human assistance with guided digital support. Each family is assigned a dedicated case manager, a single point of contact through the process, so they are not required to manage multiple interactions or follow up across offices.", "The service works in three layers:", ["Digital guidance: a unified app and dashboard with step-by-step guidance, checklists, and real-time tracking.", "On-ground assistance: field support for office visits, government paperwork, and hospital or cremation coordination.", "Human support: a case manager offering context-aware coordination and emotional reassurance."], "Because use cases, timelines, and emotional contexts differ, a fixed journey was impractical. The service is described through multiple service blueprints instead."], []],
+                    ["Exploration", "Empathy-led, then iterated.", ["The process was empathy-led service design: grief-informed research, journey mapping, then rapid sketching, wireframing, and prototyping, moving from low to mid to high fidelity, to keep the experience clear, caring, and trustworthy."], []],
+                    ["Final design", "The app, and the dashboard behind it.", ["Accessible UI flows for families, designed to reduce confusion and decision fatigue.", "A separate case manager dashboard was prepared with Claude to visualise task handling, case coordination, and support operations."], [["car", ["assets/images/saanjh/interface2.png", "assets/images/saanjh/saanjh user interface.png", "assets/images/saanjh/interface1.png"], ["Home: your journey and your case manager", "Tell us about your situation", "Documents, in one place"]]]],
+                    ["Reflection", "What changed in how I saw the problem.", ["I began by thinking about paperwork. The research kept pointing somewhere else: what the system really takes from a family is the time and space to grieve. That moved the question from how to finish tasks faster to how to carry them alongside the family.", "A fixed journey could not hold different cultures, timelines, and emotional contexts, which is why the service is shown through blueprints rather than one flow.", "Next, I would explore how the case manager's tone and timing hold up with families and frontline workers, and how regional rituals can be captured with the care they deserve."], []]]
+            },
+            biwavo: {
+                n: "02", t: "Biwavo", d: "A simple app to organise bills, warranties, and reminders.", y: "2025", role: "UI/UX Designer & Researcher", disc: "UI/UX Case Study, Mobile App", cover: "assets/images/biwavo/biwavo cover.jpg", thumb: "assets/images/visual-design/biwavo-cover.jpg", tar: "4961/3508", url: "https://www.behance.net/gallery/239943141/BIWAVO-A-UIUX-Case-Study", ar: "4/5", sec: [
+                    ["Context", "Households don't lack bills. They lack a reliable system to find them.", ["People dig through WhatsApp chats, crowded inboxes, and drawers of paper bills. A lost paper often means a lost warranty claim, and vouchers expire before anyone remembers to use them.", "Bills get scattered, deleted, or misplaced, which makes warranty claims, service calls, and returns stressful."], []],
+                    ["The question", "How might we make storing and finding bills as simple as a click?", ["Related questions I explored:", ["How might we create a shared space for families to manage bills together?", "How might we auto-detect and sort receipts?", "How might we simplify warranty tracking?", "How might we help elders save and find bills easily?"]], []],
+                    ["Research", "Secondary research, interviews, and a survey.", ["Three pain points kept returning: bills stored across multiple apps and formats, no easy way to track warranty or expiry timelines, and the frustration of realising too late.", "I compared how existing apps handle receipts and warranties (Paperbank, VouchWise, Receipt Scanner and others) and looked at OCR, SMS and email extraction, and manual uploads. Most solutions focus narrowly on storage and rely heavily on user input.", "Qualitative interviews were held with users across age groups, and a survey of 25 participants looked at where people find bills and who keeps them at home."], [["w", ["assets/images/biwavo/research finding.png"], "Survey of 25 participants: lost bills, missed deadlines, saving photos"]]],
+                    ["What I found", "Bills are scattered, and parents still hold the paper.", ["Bills are scattered across multiple apps: most people rely on WhatsApp, the gallery, or email to find receipts.", "Parents still handle most warranty storage, which points to low awareness of digital alternatives.", "Electronics and appliances matter most, where warranty claims count.", "Two personas shaped the work: Mamta Gupta, 47, a homemaker who is not very tech-savvy, and Deevanshu Kumar, 24, a working professional who is highly tech-savvy but struggles to retrieve receipts."], []],
+                    ["Design direction", "Help with the habits people already have.", ["People aren't looking for a new habit. They're looking for help with the habits they already have. Instead of reinventing the process, the opportunity was a system that fits existing routines, automates organisation, and reduces effort, built on three layers: familiarity, intelligence, and empathy.", "The goal: transform document chaos into calm order."], []],
+                    ["Exploration", "From sketches to a shared vocabulary.", ["Initial features included Smart Scan with OCR, manual add and upload, shared groups, reminders, search and categorisation, share-to-app from WhatsApp or email, cloud backup, and a dashboard. Journeys were turned into wireframes, then a cohesive design system (Urbanist, with a purple palette)."], [["w", ["assets/images/biwavo/low fi wirefraames biwavo.png"], "Early sketches and low-fidelity wireframes"]]],
+                    ["Final design", "Add it any way you like. Find it instantly.", ["Camera, voice, files, or manual entry. AI reads the bill and fills in the details. Groups share bills with family. Search and filters surface what you need, and warranty and voucher views separate active, expiring soon, and expired items."], [["w", ["assets/images/biwavo/interface.png"], "Home, sort and filter, and voice search"], ["w", ["assets/images/biwavo/interface 2.png"], "Add items effortlessly"], ["w", ["assets/images/biwavo/interface 3.png"], "Let AI handle the details"]]],
+                    ["Reflection", "Less new habit, more help with old ones.", ["The most useful shift was seeing that the problem was never a shortage of bills but a shortage of a system to find them. Designing around WhatsApp, the gallery, and shared family habits mattered more than adding one more place to store things.", "Existing apps lean on manual effort, so this design leans on scanning, voice, and sharing to keep effort low for younger and older users alike.", "Next, I would explore how automatic capture from messages can be offered without the privacy concerns that SMS and email access raise, and how reminders can stay helpful rather than noisy."], [["w", ["assets/images/biwavo/ending of case study.png"], "Bills, warranties, vouchers"]]]]
+            }
+        };
+        var P = [CS.saanjh, CS.biwavo]; P[0].slug = "saanjh"; P[1].slug = "biwavo";
+        var $ = function (s, r) { return (r || document).querySelector(s) };
+        function img(id, alt, ex) { if (!id) return ''; return '<img src="' + (IM[id] || encodeURI(id)) + '" alt="' + alt + '" ' + (ex || 'loading="lazy"') + '>' }
+        $("#list").innerHTML = P.map(function (p, i) { return '<a class="proj ' + (i ? 'b' : 'a') + ' rv" href="#/projects/' + p.slug + '" aria-label="Open the ' + p.t + ' case study"><div class="pi" style="--ar:' + (p.tar || (i ? '948/620' : '16/10')) + '">' + img(p.thumb || p.cover, p.t + ' cover') + '</div><div class="info"><span class="pnum">' + p.n + '</span><h1>' + p.t + '</h1><p class="s">' + p.d + '</p><div class="tags aa"><span>' + p.role + '</span><span>' + p.y + '</span></div></div></a>' }).join("");
+        document.querySelectorAll("img[data-im]").forEach(function (e) { e.src = IM[e.dataset.im] });
+        var home = document.documentElement, vb = $("#verify"), vw = $("#vwrap"), land = $("#top"), did = false;
+        function skip() { did = true; home.classList.add("verified"); land.classList.add("gone"); obs() }
+        function jump(a) {
+            var stop = false, off = function () { stop = true }, go = function () { if (!stop) a.scrollIntoView({ behavior: "instant", block: "start" }) };
+            ["wheel", "touchstart", "keydown", "mousedown"].forEach(function (ev) { window.addEventListener(ev, off, { once: true, passive: true }) });
+            go(); document.querySelectorAll("#work img, #visual img").forEach(function (im) { if (!im.complete) im.addEventListener("load", go, { once: true }) });
+            setTimeout(function () { stop = true }, 2500)
+        }
+        function enter(t) {
+            did = true; vb.setAttribute("aria-checked", "true"); vw.classList.add("done"); $("#vlab").textContent = "Verified";
+            try { sessionStorage.setItem("ch_in", "1") } catch (x) { }
+            setTimeout(function () { land.classList.add("fade"); home.classList.add("verified"); obs() }, t ? 0 : 1300);
+            setTimeout(function () { land.classList.add("gone"); var a = $(t || "#about"); if (a) jump(a); obs() }, t ? 500 : 2000)
+        }
+        function verify() { if (!did) enter() }
+        vb.addEventListener("click", verify);
+        vb.addEventListener("keydown", function (e) { if (e.key === " " || e.key === "Enter") { e.preventDefault(); verify() } });
+        try { if (sessionStorage.getItem("ch_in")) skip() } catch (x) { }
+        var io; function obs() {
+            if (!("IntersectionObserver" in window)) { document.querySelectorAll(".rv").forEach(function (e) { e.classList.add("in") }); return }
+            io = io || new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) } }) }, { rootMargin: "0px 0px -8% 0px" });
+            document.querySelectorAll(".rv:not(.in)").forEach(function (e) { io.observe(e) })
+        }
+        var nav = $("#nav"), on = $("#openNav");
+        function openN() { nav.classList.add("open"); nav.setAttribute("aria-hidden", "false"); on.setAttribute("aria-expanded", "true"); $("#closeNav").focus() }
+        function closeN() { nav.classList.remove("open"); nav.setAttribute("aria-hidden", "true"); on.setAttribute("aria-expanded", "false"); on.focus() }
+        on.onclick = openN; $("#closeNav").onclick = closeN;
+        var tt = $("#themeToggle"), root = document.documentElement;
+        function isDark() { var t = root.getAttribute("data-theme"); return t ? t === "dark" : matchMedia("(prefers-color-scheme:dark)").matches }
+        function paintTheme() { tt.textContent = isDark() ? "☀" : "☾"; tt.setAttribute("aria-label", isDark() ? "Switch to light mode" : "Switch to dark mode") }
+        tt.onclick = function () { var n = isDark() ? "light" : "dark"; root.setAttribute("data-theme", n); try { localStorage.setItem("theme", n) } catch (e) { } paintTheme() };
+        paintTheme();
+        var gt = $("#gridToggle");
+        function paintGrid() { var on = !root.classList.contains("no-grid"); gt.setAttribute("aria-checked", on) }
+        gt.onclick = function () { root.classList.toggle("no-grid"); try { localStorage.setItem("grid", root.classList.contains("no-grid") ? "off" : "on") } catch (e) { } paintGrid() };
+        paintGrid();
+        document.addEventListener("keydown", function (e) { if (e.key === "Escape" && nav.classList.contains("open")) closeN() });
+        nav.querySelectorAll("a").forEach(function (a) {
+            a.addEventListener("click", function (e) {
+                var id = a.getAttribute("href");
+                if (!did) { e.preventDefault(); closeN(); enter(id); return }
+                if (home.classList.contains("is-page")) { e.preventDefault(); location.hash = ""; setTimeout(function () { $(id).scrollIntoView() }, 60) }
+                closeN()
+            })
+        });
+        function fig(f) {
+            var k = f[0], ids = f[1], c = f[2];
+            if (k == "trio" || k == "duo") return '<figure class="fig rv" style="grid-column:1/-1"><div class="' + k + '">' + ids.map(function (d, j) { return '<figure>' + img(d, c[j]) + '<figcaption class="micro">' + c[j] + '</figcaption></figure>' }).join("") + '</div></figure>';
+            if (k == "seq") return '<figure class="fig seq rv" style="grid-column:1/-1"><div class="seq-stack">' + ids.map(function (d, j) { return '<div class="seq-item">' + img(d, c + ", " + (j + 1)) + '</div>' }).join("") + '</div><figcaption class="micro">' + c + '</figcaption></figure>';
+            if (k == "car") return '<figure class="fig car rv" style="grid-column:1/-1"><div class="car-track" aria-label="App screens, drag to browse">' + ids.map(function (d, j) { return '<figure class="car-slide' + (j == 1 ? ' on' : '') + '">' + img(d, c[j]) + '<figcaption class="micro">' + c[j] + '</figcaption></figure>' }).join("") + '</div></figure>';
+            return '<figure class="fig ' + k + ' rv">' + img(ids[0], c) + '<figcaption class="micro">' + c + '</figcaption></figure>'
+        }
+        function body(x) { return x.map(function (p) { if (Array.isArray(p)) return '<ul>' + p.map(function (l) { return '<li>' + l + '</li>' }).join("") + '</ul>'; if (p.indexOf("BQ:") == 0) return '<blockquote>' + p.slice(3) + '</blockquote>'; return '<p>' + p + '</p>' }).join("") }
+        function initSeq() {
+            var wide = [[0, 2, 36], [32, 36, 36], [64, 0, 36], [10, 60, 36]],
+                tall = [[0, 3, 48], [52, 3, 48], [0, 52, 48], [52, 52, 48]];
+            document.querySelectorAll(".seq-stack").forEach(function (st) {
+                var it = [].slice.call(st.children), b = 0, per = 4, still = matchMedia("(prefers-reduced-motion:reduce)").matches;
+                function show() {
+                    var sl = matchMedia("(min-width:768px)").matches ? wide : tall;
+                    st.classList.remove("bye");
+                    for (var k = 0; k < per; k++) {
+                        var e = it[(b * per + k) % it.length], p = sl[k];
+                        e.style.cssText = "left:" + p[0] + "%;top:" + p[1] + "%;width:" + p[2] + "%;--cy:" + "0%" + ";--d:" + (k * .14) + "s";
+                        e.classList.add("on")
+                    }
+                    b = (b + 1) % Math.ceil(it.length / per)
+                }
+                function hide() { st.classList.add("bye"); it.forEach(function (e) { e.classList.remove("on") }) }
+                if (still) { show(); return }
+                var on = false, t = 0;
+                var tm = setInterval(function () {
+                    if (!st.isConnected) { clearInterval(tm); return }
+                    var r = st.getBoundingClientRect(); if (r.bottom < 0 || r.top > innerHeight) return;
+                    t++;
+                    if (!on) { show(); on = true; t = 0 }
+                    else if (t >= 7) { hide(); on = false; t = -1 }
+                }, 500)
+            })
+        }
+        function initCar() {
+            var cur = document.querySelector(".car-cur");
+            if (!cur) { cur = document.createElement("div"); cur.className = "car-cur micro"; cur.textContent = "Drag"; document.body.appendChild(cur) }
+            cur.classList.remove("show");
+            document.querySelectorAll(".car-track").forEach(function (tr) {
+                var sl = [].slice.call(tr.children), down = false, x0 = 0, s0 = 0, moved = 0;
+                function on(el) { sl.forEach(function (q) { q.classList.toggle("on", q == el) }) }
+                function center(el) { tr.scrollTo({ left: el.offsetLeft - (tr.clientWidth - el.offsetWidth) / 2, behavior: "smooth" }) }
+                function nearest() { var m = tr.scrollLeft + tr.clientWidth / 2, b = sl[0], d = 1e9; sl.forEach(function (q) { var e = Math.abs(q.offsetLeft + q.offsetWidth / 2 - m); if (e < d) { d = e; b = q } }); return b }
+                tr.addEventListener("mouseenter", function () { cur.classList.add("show") });
+                tr.addEventListener("mouseleave", function () { cur.classList.remove("show"); down = false; cur.classList.remove("drag") });
+                tr.addEventListener("mousemove", function (e) {
+                    cur.style.transform = "translate3d(" + e.clientX + "px," + e.clientY + "px,0) scale(1)";
+                    if (down) { moved += Math.abs(e.movementX); tr.scrollLeft = s0 - (e.clientX - x0); return }
+                    var t = e.target.closest ? e.target.closest(".car-slide") : null; if (t) on(t)
+                });
+                tr.addEventListener("mousedown", function (e) { down = true; moved = 0; x0 = e.clientX; s0 = tr.scrollLeft; tr.style.scrollSnapType = "none"; cur.classList.add("drag"); cur.textContent = "" });
+                window.addEventListener("mouseup", function () { if (!down) return; down = false; cur.classList.remove("drag"); cur.textContent = "Drag"; tr.style.scrollSnapType = ""; var n = nearest(); on(n); center(n) });
+                tr.addEventListener("click", function (e) { var t = e.target.closest(".car-slide"); if (t && moved < 5) { on(t); center(t) } });
+                tr.addEventListener("scroll", function () { if (!down && matchMedia("(max-width:767px)").matches) on(nearest()) }, { passive: true });
+                var hov = false, idx = 1, still = matchMedia("(prefers-reduced-motion:reduce)").matches;
+                tr.addEventListener("mouseenter", function () { hov = true });
+                tr.addEventListener("mouseleave", function () { hov = false });
+                tr.addEventListener("touchstart", function () { hov = true }, { passive: true });
+                tr.addEventListener("touchend", function () { setTimeout(function () { hov = false }, 3000) }, { passive: true });
+                if (matchMedia("(max-width:767px)").matches) setTimeout(function () { center(sl[1]) }, 50);
+                if (!still) var tm = setInterval(function () {
+                    if (!tr.isConnected) { clearInterval(tm); return }
+                    if (hov || down) return;
+                    idx = (sl.indexOf(tr.querySelector(".on")) + 1) % sl.length; on(sl[idx]); center(sl[idx])
+                }, 3000)
+            })
+        }
+        function render(slug) {
+            var p = P.filter(function (q) { return q.slug == slug })[0]; if (!p) return false; var nx = P[p.slug == "saanjh" ? 1 : 0];
+            var h = '<article class="cs cs-' + p.slug + '"><a class="back micro" href="#work">← Work</a><div class="micro">' + p.n + '</div><h1>' + p.t + '</h1><p class="lede">' + p.d + '</p><a class="micro" style="display:inline-block;margin-top:var(--s1);color:var(--grey);text-decoration:underline;text-underline-offset:3px" href="' + p.url + '" target="_blank" rel="noopener noreferrer">View full case study on Behance ↗</a>' + (p.tryUrl ? '<a class="micro" style="display:inline-block;margin:var(--s1) 0 0 16px;color:var(--grey);text-decoration:underline;text-underline-offset:3px" href="' + p.tryUrl + '" target="_blank" rel="noopener">See how case manager works ↗</a>' : '') + '<div class="facts micro"><div><span>Year</span><b>' + p.y + '</b></div><div><span>Role</span><b>' + p.role + '</b></div><div style="grid-column:span 2"><span>Category</span><b>' + p.disc + '</b></div></div>' + (p.cover ? '<div class="cover">' + img(p.cover, p.t + ' cover', '') + '</div>' : '');
+            p.sec.forEach(function (s, k) { h += '<section class="sec"><span class="micro lab rv">' + String(k + 1).padStart(2, "0") + ' — ' + s[0] + '</span><div class="body rv">' + (s[1] ? '<h1>' + s[1] + '</h1>' : '') + body(s[2]) + '</div>' + s[3].map(fig).join("") + '</section>' });
+            h += '</article><div class="pnav"><span class="micro">View full case study at</span><a href="' + p.url + '" target="_blank" rel="noopener noreferrer">Behance →</a></div><div class="pnav" style="padding-top:0"><span class="micro">Next project</span><a href="#/projects/' + nx.slug + '">' + nx.n + ' — ' + nx.t + ' →</a></div><footer class="micro"><span>© Chaitanya Handa</span><a href="Chaitanya%20Handa%20Resume.pdf" download="Chaitanya Handa Resume.pdf" style="text-decoration:underline;text-underline-offset:3px">Download CV</a><span>Made by a human.</span></footer>';
+            $("#page").innerHTML = h; document.title = p.t + " — Chaitanya Handa"; initCar(); initSeq(); return true
+        }
+        var VDIM = { "c-client.jpg": [1200, 1600], "c-card.png": [1600, 813], "c-logo.png": [1200, 1200], "c-sketch.png": [1600, 1136], "g-illus.png": [1600, 470], "q-mark.png": [1800, 960], "q-sketch.png": [1400, 1029], "q-stat.png": [1800, 1010], "c-cover.jpg": [1600, 1106], "c-desk.jpg": [1050, 1400], "c-inside.jpg": [1050, 1400], "c-print.jpg": [1200, 1600], "g-mug1.jpg": [1400, 956], "g-mug2.jpg": [1400, 1039], "g-mug3.jpg": [1800, 1197], "q-brand.jpg": [1800, 1001], "q-sign.jpg": [1800, 1016], "q-social.jpg": [1800, 897] };
+        var BEH = "https://www.behance.net/chaitanya_handa";
+        var VD = [
+            {
+                slug: "commyounity", t: "Commyounity", cat: "Logo Design · Print Design", d: "A psychology-led journaling identity shaped through reflection and exploration.", thumb: "c-cover.jpg", hero: ["c-cover.jpg", "Commyounity journal cover held in two hands, showing a line illustration of a hand writing beside a cup, with the wordmark at the bottom"],
+                sec: [
+                    ["Context", "Psychology, journaling and self-reflection.", ["Commyounity is a journaling community founded by a psychologist, bringing together journaling, psychology and self-reflection."], null],
+                    ["Brief", "A warm, thoughtful identity.", ["The brief was to create a logo that could communicate this connection while establishing a warm, thoughtful identity for the brand’s first set of physical and visual touchpoints."], null],
+                    ["Exploration", "Exploring the idea", ["<span class=\"sup\">Early sketches allowed different relationships between psychology, journaling and self-reflection to emerge before narrowing the direction.</span>", "I explored the relationship between psychology, journaling and self-reflection to establish the visual direction."],
+                        [{ t: "gal", cls: "c2", items: [["c-sketch.png", "Pen sketches across two notebook pages: wordmark lettering, the letters C, Y and U, and a psychology symbol redrawn as curved leaf shapes", "Raw sketches, left as they were drawn", "full"]] }]],
+                    ["Development", "Beyond an isolated mark.", ["Rather than treating the logo as an isolated mark, I considered how the identity could extend into objects that form part of the journaling experience. This led to a visual system that feels personal, reflective and approachable."], null],
+                    ["Final outcome", "From mark to system", ["The final direction became more than a logo — it established a visual language that could move naturally across the brand’s first physical and editorial touchpoints."],
+                        [{ t: "gal", cls: "c2", items: [["c-logo.png", "Commyounity logo: two curved leaf shapes forming a U above the lowercase wordmark", "The logo", "w2"]] }]],
+                    ["Applications", "In the hand, on the table.", [],
+                        [{ t: "gal", cls: "c2", items: [["c-card.png", "Commyounity business card in blue on a wooden block with a leaf", "Business card", "An early physical touchpoint for the identity.", "full"], ["c-cover.jpg", "Hardcover Commyounity notebook held in two hands", "Cover design", "Extending the identity into an editorial format."], ["c-inside.jpg", "Open Commyounity notebook with a ‘for you’ page beside a laptop and a vase", "Notebook", "Bringing the visual language into the journaling experience."], ["c-client.jpg", "A person in a bookshop café writing in an open Commyounity notebook beside a slice of cake", "", ""], ["c-print.jpg", "Commyounity notebook on a café table next to a slice of cake and glasses", "", ""], ["c-desk.jpg", "Commyounity notebook on a round table with two pens, a vase and a drink", "", ""]] }]],
+                    ["Closing", "", [], [{ t: "quote", x: "The identity was designed to feel thoughtful without becoming clinical — creating space for both psychology and personal reflection." }]]
+                ],
+                cta: [["View full case study →", "https://www.behance.net/gallery/216416901/Commyounity-Branding", "ext"]]
+            },
+            {
+                slug: "qouagni", t: "Qouagni", cat: "Brand Identity", d: "A visual identity system explored across presentations, stationery and social media.", thumb: "q-mark.png", hero: ["q-mark.png", "Qouagni Qi logo mark in purple with a red dot, inside concentric gradient rings on a dark background"],
+                sec: [
+                    ["Context", "A system, not a standalone logo.", ["Qouagni was approached as a broader identity system rather than a standalone logo. The work explored how the brand could maintain a recognisable visual language while adapting across presentation decks, stationery and social communication."], null],
+                    ["Scope", "Work done", [["Pitch decks", "Logo design", "Stationery", "Social media"]], null],
+                    ["Exploration", "Building the identity system", ["<span class=\"sup\">The exploration focused on creating a visual language flexible enough to work across both structured brand communication and more immediate social formats.</span>"],
+                        [{ t: "gal", cls: "c2", items: [["q-sketch.png", "Pen sketches of logo ideas: square frames with cursor arrows, circular marks and a Q beside a lowercase i", "Early logo sketches", "full"]] }]],
+                    ["Development", "Identity", ["I built the identity around the idea of making the future of AI feel accessible rather than overly technical. The visual system combines bold typography, a futuristic colour palette, high-contrast compositions, and flexible graphic elements to create a distinctive language that could adapt across digital experiences, marketing assets, presentations, and social media."],
+                        null],
+                    ["Final outcome", "The wordmark", [],
+                        [{ t: "gal", cls: "c2", items: [["q-sign.jpg", "Quaogni wordmark in purple lettering on a dark building facade, in black and white", "The wordmark in context", "full"]] }]],
+                    ["Applications", "One language, several surfaces.", [],
+                        [{ t: "stage", x: "Physical touchpoints" }, { t: "gal", cls: "c2", items: [["q-stat.png", "Qi brand stationery on a black background: business card, ID badge, contact card, USB drive, envelope, letterhead and pen", "Stationery", "", "full"]] },
+                        { t: "stage", x: "Digital expression" }, { t: "gal", cls: "c2", items: [["q-social.jpg", "Three purple and red social media cards with Qi logo and headlines such as Faster. Smarter. Limitless.", "Social media", "", "full"], ["q-brand.jpg", "Brand merchandise: t-shirts, a smartwatch, a coffee cup and a laptop showing Qi branding", "Brand merchandise", "", "full"]] }]]
+                ],
+                cta: [["View full case study →", "https://www.behance.net/gallery/220736189/", "ext"]]
+            },
+            {
+                slug: "good-insurance", t: "Good Insurance", cat: "Illustration · Social Media · Brand Merchandise", d: "Visual communication built around movement, energy and everyday brand moments.", thumb: "g-mug1.jpg", hero: ["g-mug1.jpg", "White mug under an espresso machine, printed with the line ‘Have a good day’ above a line-art city skyline"],
+                sec: [
+                    ["Context", "Movement, energy and vitality.", ["Good Insurance’s communication focused on vehicle insurance, with a visual direction built around movement, energy and vitality."], null],
+                    ["Role", "Illustration across touchpoints.", ["My role centred on creating custom illustrations for festive social campaigns, event standees and corporate gifting, including branded mugs."], null],
+                    ["Exploration", "Two directions, one brief", ["<span class=\"sup\">I explored two visual directions for the communication before defining the final approach.</span>"],
+                        [{
+                            t: "dir", cols: [
+                                { h: "01 — Monogram as hero", p: "A more corporate direction built around the monogram as the primary visual element — structured, recognisable and brand-forward.", items: [["g-mug3.jpg", "Mug printed with the blue and orange monogram and the line Have a Good Day", "Direction 01"]] },
+                                { h: "02 — Illustration + tagline", p: "A more expressive route using illustration and a clear verbal idea to create a lighter, more energetic communication style.", items: [["g-illus.png", "Line illustration of a city skyline and a van with a shield and tick", "Direction 02 — illustration"], ["g-mug1.jpg", "Mug printed with Have a good day above an illustrated skyline", "Direction 02 — tagline"]] }]
+                        }]],
+                    ["Development", "Illustration as the primary language.", ["I used illustration as the primary visual language, creating custom artwork that could adapt across different brand touchpoints.", "The illustrations were developed with the context of each application in mind — from expressive festive content and event standees to smaller formats like branded mugs — while keeping the overall visual language cohesive and recognisable."], null],
+                    ["Applications", "From campaign to object", [],
+                        [{ t: "gal", cls: "c2", items: [["g-mug2.jpg", "Mug printed with a line-art van, shield and clouds", "Corporate gifting", "Translating the visual language onto a smaller branded object.", "full"]] }]]
+                ],
+                cta: [["View more on Behance →", "https://www.behance.net/gallery/199739089/Corporate-mug-design", "ext"], ["Instagram →", "https://www.instagram.com/goodinsurancein", "ext"]]
+            }
+        ];
+        function vimg(k, alt, eager) { var d = VDIM[k] || []; return '<img src="assets/images/visual-design/' + k + '" alt="' + alt.replace(/"/g, "&quot;") + '"' + (d[0] ? ' width="' + d[0] + '" height="' + d[1] + '"' : '') + (eager ? ' fetchpriority="high"' : ' loading="lazy"') + ' decoding="async">' }
+        function vfig(it, cls) { var c = (it[2] || "") + (it[3] ? (it[2] ? " — " : "") + it[3] : ""); return '<figure class="' + (cls || "") + ' rv"><div class="zoom">' + vimg(it[0], it[1]) + '</div>' + (c ? '<figcaption class="micro">' + c + '</figcaption>' : '') + '</figure>' }
+        function vblock(b) {
+            if (b.t == "stage") return '<div class="gal c2"><div class="st"><span class="micro">' + b.x + '</span></div></div>';
+            if (b.t == "quote") return '<p class="quote rv" style="margin-top:var(--s4)">' + b.x + '</p>';
+            if (b.t == "strip") return '<div class="strip" tabindex="0" role="region" aria-label="' + b.label + ' — scroll sideways">' + b.items.map(function (it) { return vfig(it) }).join("") + '</div>';
+            if (b.t == "dir") return '<div class="dir">' + b.cols.map(function (c) { return '<div class="col rv"><h1>' + c.h + '</h1><p>' + c.p + '</p><div class="gal">' + c.items.map(function (it) { return vfig(it) }).join("") + '</div></div>' }).join("") + '</div>';
+            return '<div class="gal ' + b.cls + '">' + b.items.map(function (it, i) { var m = it.length > 4 ? it[4] : (it[3] === "full" || it[3] === "w2" ? it[3] : ""); if (it[3] === "full" || it[3] === "w2") it = [it[0], it[1], it[2], ""]; return vfig(it, (m == "full" ? "full" : m == "w2" ? "w2" : "")) }).join("") + '</div>'
+        }
+        var vio;
+        function renderVD(slug) {
+            var i = VD.findIndex(function (q) { return q.slug == slug }); if (i < 0) return false; var p = VD[i], nx = VD[(i + 1) % VD.length];
+            var h = '<article class="cs vd-pg"><a class="back micro" href="#visual">← All projects</a><div class="micro">' + p.cat + '</div><h1>' + p.t + '</h1><p class="lede">' + p.d + '</p><div class="hero rv">' + vimg(p.hero[0], p.hero[1], true) + '</div>';
+            p.sec.forEach(function (s, k) {
+                var paras = s[2].map(function (x) { if (Array.isArray(x)) return '<ul>' + x.map(function (l) { return '<li>' + l + '</li>' }).join("") + '</ul>'; return '<p>' + x + '</p>' }).join("");
+                h += '<section class="sec" data-lab="' + String(k + 2).padStart(2, "0") + ' — ' + s[0] + '"><span class="micro lab rv">' + String(k + 2).padStart(2, "0") + ' — ' + s[0] + '</span>' + ((s[1] || paras) ? '<div class="body rv">' + (s[1] ? '<h1>' + s[1] + '</h1>' : '') + paras + '</div>' : '') + (s[3] ? s[3].map(vblock).join("") : '') + '</section>'
+            });
+            var n = p.sec.length + 2;
+            h += (p.cta.length ? '<section class="cta" data-lab="' + String(n).padStart(2, "0") + ' — Next"><span class="micro lab rv" style="display:block;margin-bottom:var(--s2)">' + String(n).padStart(2, "0") + ' — Next</span>' + p.cta.map(function (c) { return '<a href="' + c[1].replace(/ /g, "%20") + '"' + (c[2] == "download" ? ' download="Kalarpan Case Study.pdf"' : ' target="_blank" rel="noopener noreferrer"') + '>' + c[0] + '</a>' }).join("") + '</section>' : '') + '</article>';
+            h += '<div class="pnav"><span class="micro">Next project</span><a href="#/visual/' + nx.slug + '">' + nx.t + ' →</a></div><div class="pnav" style="padding-top:0"><a class="micro" style="font-size:12.5px;font-weight:400" href="#visual">← All projects</a></div><footer class="micro"><span>© Chaitanya Handa</span><a href="Chaitanya%20Handa%20Resume.pdf" download="Chaitanya Handa Resume.pdf" style="text-decoration:underline;text-underline-offset:3px">Download CV</a><span>Made by a human.</span></footer><div class="vd-now micro" id="vdnow" aria-hidden="true"></div>';
+            $("#page").innerHTML = h; document.title = p.t + " — Chaitanya Handa";
+            if (vio) vio.disconnect();
+            if ("IntersectionObserver" in window) {
+                var now = $("#vdnow"); vio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { now.textContent = p.t + " · " + e.target.getAttribute("data-lab"); now.classList.add("on") } }) }, { rootMargin: "-40% 0px -55% 0px" });
+                document.querySelectorAll("#page [data-lab]").forEach(function (e) { vio.observe(e) })
+            }
+            return true
+        }
+        $("#vdlist").innerHTML = VD.map(function (p) { return '<li><a class="vd-tile rv" href="#/visual/' + p.slug + '" aria-label="' + p.t + ' — ' + p.cat + '. Explore project"><div class="pi"' + (p.ar ? ' style="aspect-ratio:' + p.ar + '"' : '') + '>' + vimg(p.thumb, p.hero[1]) + '</div><div class="row1"><h1>' + p.t + '</h1><span class="micro cue" aria-hidden="true">Explore project →</span></div><span class="micro cat">' + p.cat + '</span><p class="s">' + p.d + '</p></a></li>' }).join(""); obs();
+        function route() {
+            var m = location.hash.match(/^#\/projects\/([\w-]+)/), v = location.hash.match(/^#\/visual\/([\w-]+)/);
+            if ((m && render(m[1])) || (v && renderVD(v[1]))) { home.classList.add("is-page"); window.scrollTo(0, 0); obs() }
+            else if (home.classList.contains("is-page")) {
+                home.classList.remove("is-page"); document.title = "Chaitanya Handa — UI/UX Designer & Researcher";
+                setTimeout(function () { var t = location.hash && !/^#\//.test(location.hash) ? $(location.hash) : $("#work"); if (t) t.scrollIntoView() }, 40); obs()
+            }
+        }
+        window.addEventListener("hashchange", route);
+        if (/^#\/(projects|visual)\//.test(location.hash)) { skip() }
+        route();
+    </script>
+</body>
+
+</html>
