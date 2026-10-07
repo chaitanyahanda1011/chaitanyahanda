@@ -1384,3 +1384,46 @@ html { zoom: 1.2; --z: 1.2 }
     .cs-biwavo .sec:nth-of-type(8) .fig.w { grid-column: 1/-1; width: 100%; margin-left: 0 }
     .cs-biwavo .sec:nth-of-type(6) .fig.w { grid-column: 1/-1; width: 80%; margin-left: auto }
 }
+
+/* about photo: always shown whole, never cropped, at its own proportions (1594×1568) */
+.abimg .ph { aspect-ratio: 1594 / 1568 }
+.abimg .ph img { object-fit: contain }
+@media (min-width: 768px) {
+    .about .abimg { align-items: flex-start }
+    .about .abimg .ph { flex: none; height: 100%; width: auto; max-width: 100%; aspect-ratio: 1594 / 1568 }
+    .about .abimg .ph img { object-fit: contain }
+}
+
+/* saanjh final design carousel: screens at their original pixel size, no scaling blur */
+.car-slide, .car-slide.on { transform: none }
+@media (min-width: 768px) {
+    .car-track { width: 100%; padding: 0 calc(50% - 230px) }
+    .car-slide { flex: 0 0 auto }
+    .car-slide img { width: auto; max-width: none; zoom: calc(1 / var(--z, 1)); image-rendering: auto }
+}
+@media (max-width: 767px) {
+    .car-slide { transform: none }
+}
+
+/* saanjh final design carousel (landscape 4:3 screens): one large slide, neighbours peeking */
+@media (min-width: 768px) {
+    .car-track { padding: 0 24% }
+    .car-slide { flex: 0 0 52% }
+    .car-slide img { width: 100%; zoom: 1 }
+}
+@media (max-width: 767px) {
+    .car-track { padding: 0 8% }
+    .car-slide { flex: 0 0 84% }
+}
+.car-slide { opacity: .45 }
+.car-slide.on { opacity: 1 }
+
+/* saanjh carousel: the hovered screen itself enlarges (1.8x) and sits above its neighbours */
+.car-slide .zw { position: relative; transition: transform .6s var(--e) }
+.car-slide .zw img { display: block }
+@media (hover: hover) and (min-width: 768px) {
+    .car-track { padding-top: 180px; padding-bottom: 180px; margin-top: -130px; margin-bottom: -130px }
+    .car-slide:hover { z-index: 5; opacity: 1 }
+    .car-slide:hover .zw { transform: scale(1.8); z-index: 5 }
+    .car-slide { position: relative }
+}
